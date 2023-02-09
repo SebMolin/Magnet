@@ -7,13 +7,13 @@ import threading
 
 class MyFrame(wx.Frame):
     def __init__(self):
-        super().__init__(parent=None, title="Hello World")
+        super().__init__(parent=None, title="Sotering af sømm")
         panel = wx.Panel(self)
         my_sizer = wx.BoxSizer(wx.VERTICAL)
         staticText = wx.StaticText(panel, -1, style = wx.ALIGN_CENTER) 
         font = wx.Font(18, wx.ROMAN, wx.ITALIC, wx.NORMAL)
         staticText.SetFont(font)
-        staticText.SetLabel("SORTER SØM!!!") 
+        staticText.SetLabel("Her kan man soterer sømne") 
         my_sizer.Add(staticText, 0, wx.ALL | wx.EXPAND, 5)
         mulighed = ["Empty","Small","Medium","Large", "Mega"]
         self.listpick1 = wx.Choice(panel, choices = mulighed)
@@ -34,7 +34,9 @@ class MyFrame(wx.Frame):
         self.my_resultText.SetLabel("RESULTAT SKER HER!")
         my_sizer.Add(self.my_resultText)
         panel.SetSizer(my_sizer)
+
         #SÆT MOTOR OG MAGNET OP!
+        
         self.MAG = 32 
         self.INTERRUPTER = 36
         self.trin = 0
